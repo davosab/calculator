@@ -36,15 +36,3 @@ for (let i = 0; i < operands.length; i++) {
 backspace.onclick = () => removeLast();
 allClearButton.onclick = () => allClear();
 equals.onclick = () => solveEquation();
-//In solveEquation() to fix float inaccuracy
-  // if (result.innerHTML.toString().includes(".")) {
-  //   const resultArrayValues = result.innerHTML.split("/\(|\)|\÷|\×|\-|\+/g"),
-  //     resultArrayOperators = result.innerHTML.split("/\(|\)|\÷|\×|\-|\+/g");
-  //   for (let i = 0; i < resultArrayValues.length; i++) {
-  //     if (isNaN(resultArrayValues[i])) {
-  //       resultArrayValues.splice(i, 1);
-  //       i--;
-  //     }
-  //   }
-  //   resultArrayValues.map(x => x * 10);//Array of non-operators with values ×10
-  //   }

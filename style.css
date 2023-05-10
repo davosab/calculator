@@ -41,9 +41,12 @@ body {
 .shape-container {
   position: absolute;
   z-index: -10;
-  height: 900px;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
+}
+@keyframes zoom-in {
+  from {width: 0; height: 0; left: calc(55vw + 250px);}
 }
 .shape {
   position: absolute;
@@ -56,6 +59,7 @@ body {
   left: 55vw;
   max-height: 500px;
   max-width: 500px;
+  animation: zoom-in 0.6s ease-in-out;
 }
 
 /*** ABOUT PROJECT - LEFT ***/
@@ -83,6 +87,11 @@ h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: var(--medium);
+}
+.title img:hover {
+  transition: all 0.3s;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .title span {
   background-color: var(--dark-blue);
@@ -163,6 +172,8 @@ section p {
   font-size: 2.5rem;
   font-weight: var(--medium);
   color: var(--very-dark-blue);
+  word-wrap: break-word;
+  max-width: 16rem;
 }
 .grid {
   position: relative;
@@ -215,6 +226,9 @@ button.operator {
     flex-direction: column;
     padding: 6vw 2rem 2rem;
     gap: 3vw;
+  }
+  .shape-container {
+    height: 900px;
   }
   .shape {
     top: 63rem;

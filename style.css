@@ -224,6 +224,9 @@ button.operator {
 }
 
 @media screen and (max-width: 829px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
   :root {
     font-size: 10px;
   }
@@ -254,8 +257,5 @@ button.operator {
     min-height: 40px;
     max-height: 80px;
     margin: 2rem;
-  }
-  button {
-    -webkit-tap-highlight-color: transparent;
   }
 }

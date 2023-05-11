@@ -7,7 +7,7 @@ const
   //Screen selectors
   previousEquation = document.getElementById("previous-equation"),
   result = document.getElementById("result");
-  
+
 //Functions
 function removeLast() {
   result.innerHTML = result.innerHTML.slice(0, -1);
@@ -31,8 +31,8 @@ function solveEquation() {
 for (let i = 0; i < operands.length; i++) {
   operands[i].onclick = () => {
     if (result.innerHTML.length == 22) {
-      alert("Hopa! \nEcuația poate fi de cel mult 22 cifre.");
-      return; 
+      alert("Hopa! \nEcuația poate fi de cel mult 22 cifre."); 
+      return;
     }
     result.innerHTML += operands[i].innerHTML;
   };
